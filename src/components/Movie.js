@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { deleteMovie } from "../actions/movieActions";
 import { useParams, useHistory } from "react-router-dom";
 
-const mapStatetoProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     movies: state.movie.movies,
     displayFavorites: state.favorite.displayFavorites,
@@ -82,4 +82,4 @@ const Movie = (props) => {
   );
 };
 
-export default connect(mapStatetoProps, { deleteMovie })(Movie);
+export default connect(mapStateToProps, { deleteMovie })(Movie);

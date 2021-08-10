@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { addMovie } from "./../actions/movieActions";
 
-const mapStatetoProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     movies: state.movies.movie,
   };
@@ -111,4 +111,4 @@ const AddMovieForm = (props) => {
   );
 };
 
-export default connect(mapStatetoProps, {})(AddMovieForm);
+export default connect(mapStateToProps, {})(AddMovieForm);

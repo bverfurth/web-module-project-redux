@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import MovieListItem from "./MovieListItem";
 import MovieFooter from "./MovieFooter";
 
-const mapStatetoProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     movies: state.movies,
   };
@@ -37,4 +37,4 @@ const MovieList = (props) => {
   );
 };
 
-export default connect(mapStatetoProps, {})(MovieList);
+export default connect(mapStateToProps, {})(MovieList);
