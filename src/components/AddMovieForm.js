@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { addMovie } from "./../actions/movieActions";
 import { connect } from "react-redux";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { addMovie } from "./../actions/movieActions";
 
 const mapStatetoProps = (state) => {
   return {
@@ -28,7 +28,7 @@ const AddMovieForm = (props) => {
   };
 
   const handleSubmit = (e) => {
-    Object.assign(movie, { id: props.movies });
+    Object.assign(movie, { id: props.movies.length });
     props.dispatch(addMovie(movie));
     push("/movies");
   };

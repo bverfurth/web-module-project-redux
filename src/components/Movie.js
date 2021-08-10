@@ -1,7 +1,7 @@
 import React from "react";
-import { useParams, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { deleteMovie } from "../actions/movieActions";
+import { useParams, useHistory } from "react-router-dom";
 
 const mapStatetoProps = (state) => {
   return {
