@@ -3,12 +3,6 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { addMovie } from "./../actions/movieActions";
 
-const mapStateToProps = (state) => {
-  return {
-    movies: state.movies.movie,
-  };
-};
-
 const AddMovieForm = (props) => {
   const { push } = useHistory();
 
@@ -28,8 +22,7 @@ const AddMovieForm = (props) => {
   };
 
   const handleSubmit = (e) => {
-    Object.assign(movie, { id: props.movies.length });
-    props.dispatch(addMovie(movie));
+    props.addMovie(movie);
     push("/movies");
   };
 
@@ -111,4 +104,4 @@ const AddMovieForm = (props) => {
   );
 };
 
-export default connect(mapStateToProps, {})(AddMovieForm);
+export default connect(null, { addMovie })(AddMovieForm);

@@ -5,12 +5,12 @@ import MovieFooter from "./MovieFooter";
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.movies,
+    movies: state.movieReducer.movies,
   };
 };
 
-const MovieList = (props) => {
-  const movies = props.movies;
+const MovieList = (state) => {
+  const movies = state.movies;
 
   return (
     <div className="col">
@@ -26,7 +26,7 @@ const MovieList = (props) => {
         </thead>
 
         <tbody>
-          {props.movies.map((movie) => (
+          {movies.map((movie) => (
             <MovieListItem key={movie.id} movie={movie} />
           ))}
         </tbody>
@@ -37,4 +37,4 @@ const MovieList = (props) => {
   );
 };
 
-export default connect(mapStateToProps, {})(MovieList);
+export default connect(mapStateToProps)(MovieList);
