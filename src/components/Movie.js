@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { deleteMovie, addFavorite } from "../actions/movieActions";
+import { deleteMovie } from "../actions/movieActions";
 import { useParams, useHistory } from "react-router-dom";
+import { addFavorite } from "../actions/favoriteActions";
 
 const mapStateToProps = (state) => {
   return {

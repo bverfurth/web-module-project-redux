@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { toggleFavorite } from "../actions/movieActions";
+import { toggleFavorite } from "../actions/favoriteActions";
 
 const mapStateToProps = (state) => {
   return {
