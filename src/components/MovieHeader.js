@@ -5,8 +5,8 @@ import { toggleFavorite } from "../actions/movieActions";
 
 const mapStateToProps = (state) => {
   return {
-    appTitle: state.movie.appTitle,
-    displayFavorites: state.favorite.displayFavorites,
+    appTitle: state.appTitle,
+    displayFavorites: state.displayFavorites,
   };
 };
 

@@ -5,8 +5,8 @@ import { useParams, useHistory } from "react-router-dom";
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.movie.movies,
-    displayFavorites: state.favorite.displayFavorites,
+    movies: state.movies,
+    displayFavorites: state.displayFavoritesdisplayFavorites,
   };
 };
 
@@ -18,7 +18,7 @@ const Movie = (props) => {
   const movie = movies.find((movie) => movie.id === Number(id));
 
   const handleDelete = (e) => {
-    props.dispatch(deleteMovie(movie.id));
+    props.deleteMovie(movie.id);
     push("/movies");
   };
 
